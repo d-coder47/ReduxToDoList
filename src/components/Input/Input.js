@@ -1,11 +1,21 @@
 import React, { useState } from 'react'
 import classes from './Input.module.css'
 
+import { saveTodo } from '../../features/todoSlice'
+import { useDispatch } from 'react-redux'
+
 const Input  = () => {
     const [input, setInput] = useState('')
+    const dispatch = useDispatch()
 
     const addTodo = () => {
-    
+        console.log(`Adding ${input}`)
+
+        dispatch(saveTodo({
+            item: input,
+            done: false,
+            id: Date.now(),
+        }))
     }
 
 
