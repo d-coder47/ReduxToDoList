@@ -1,11 +1,18 @@
-.todoItem {
+.todoItem__container {
     display: flex;
     align-items: center;
     width: 80%;
+    gap: 6px;
+}
+
+.todoItem {
+    display: flex;
+    align-items: center;
     background-color: white;
     margin: 6px 4px;
     height: 40px;
     border-radius: 12px;
+    flex: 1;
 }
 
 .todoItem>p {
@@ -14,4 +21,10 @@
 
 .todoItem__done {
     text-decoration: line-through;
+}
+
+.button {
+    height: 38px;
+    background-color: tomato;
+    outline: none;
 }

@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="app">
       <header className="App-header">
-        todo list
         <div className="app__container" >
+          <h1> Todo APP </h1>
           <div className="app__todoContainer" >
             { todoList.map(item => (
               <TodoItem 
@@ -23,8 +23,8 @@ function App() {
                 id={item.id}
               />
             )) }
-            <Input />
           </div>
+          <Input />
         </div>
       </header>
     </div>

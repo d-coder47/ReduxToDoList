@@ -9,18 +9,17 @@ const Input  = () => {
     const dispatch = useDispatch()
 
     const addTodo = () => {
-        console.log(`Adding ${input}`)
-
         dispatch(saveTodo({
             item: input,
             done: false,
             id: Date.now(),
         }))
+        setInput('')
     }
 
 
     return <div className={classes.input} >
-        <input type="text" value={input} onChange={(event) => setInput(event.target.value)} />
+        <input type="text" placeholder="add Todo" value={input} onChange={(event) => setInput(event.target.value)} />
         <button onClick={addTodo} >Add!</button>
     </div>
 }
